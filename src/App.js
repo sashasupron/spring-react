@@ -1,14 +1,14 @@
-import './App.css';
-import FeaturesList from './components/FeaturesList';
-import features from './data/features';
-import Header from './components/Header';
-
+import "./App.css";
+import Header from "./components/Header";
+import Description from "./components/Description";
+import Search from "./components/Search";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <FeaturesList features={features}/>
+      <Description />
+      <Search />
     </div>
   );
 }
