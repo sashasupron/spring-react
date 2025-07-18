@@ -1,15 +1,17 @@
 import "./App.css";
-import Header from "./components/Header";
-import Description from "./components/Description";
-import Search from "./components/Search";
+import "./index.css";
+import { Router } from "./router";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import store from "./redux/store";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Description />
-      <Search />
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </Provider>
   );
 }
 

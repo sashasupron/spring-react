@@ -1,7 +1,4 @@
-import '../index.css'; 
-
 function FeaturesList({ features, regex }) {
-  const renderProjects = (regex = '') => {
     const lowerRegex = regex.toLowerCase();
 
     const filtered = features.filter((item) =>
@@ -30,9 +27,6 @@ function FeaturesList({ features, regex }) {
         ))}
       </div>
     );
-  };
-
-  return renderProjects(regex); 
 }
 
-export default FeaturesList;
+export { FeaturesList };

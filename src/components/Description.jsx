@@ -1,5 +1,3 @@
-import '../index.css';
-
 function Description() {
   return (
     <>
@@ -18,4 +16,4 @@ function Description() {
   );
 }
 
-export default Description;
+export { Description };
