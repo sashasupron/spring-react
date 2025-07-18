@@ -1,6 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
-import "../index.css";
-import FeaturesList from "./FeaturesList";
+import { useState, useEffect } from "react";
+import { FeaturesList } from "./FeaturesList";
 import features from "../data/features";
 import debounce from "lodash.debounce";
 
@@ -8,12 +7,9 @@ function Search() {
   const [inputValue, setInputValue] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const debouncedSearch = useCallback(
-    debounce((value) => {
-      setSearchQuery(value);
-    }, 3000),
-    []
-  );
+  const debouncedSearch = debounce((value) => {
+    setSearchQuery(value);
+  }, 300);
 
   useEffect(() => {
     debouncedSearch(inputValue);
@@ -33,4 +29,4 @@ function Search() {
   );
 }
 
-export default Search;
+export { Search };

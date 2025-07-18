@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import "../index.css";
-import NavBar from "./Nav";
+import { useState } from "react";
+import { NavBar } from "./Nav";
 
 function SideBar({ navItems }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -30,4 +29,4 @@ function SideBar({ navItems }) {
   );
 }
 
-export default SideBar;
+export { SideBar };
