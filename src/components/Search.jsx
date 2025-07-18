@@ -18,7 +18,7 @@ function Search() {
   return (
     <>
       <input
-        id="searchInput"
+        className="search-input"
         placeholder="Find a feature"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
