@@ -2,7 +2,7 @@ const initialState = {
   isAuthenticated: false,
 };
 
-export default function authReducer(state = initialState, action) {
+function authReducer(state = initialState, action) {
   switch (action.type) {
     case "LOGIN":
       return { ...state, isAuthenticated: true };
@@ -12,3 +12,5 @@ export default function authReducer(state = initialState, action) {
       return state;
   }
 }
+
+export { authReducer };

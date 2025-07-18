@@ -1,5 +1,3 @@
-import '../index.css'; 
-
 function FeaturesList({ features, regex }) {
     const lowerRegex = regex.toLowerCase();
 
@@ -31,4 +29,4 @@ function FeaturesList({ features, regex }) {
     );
 }
 
-export default FeaturesList;
+export { FeaturesList };
