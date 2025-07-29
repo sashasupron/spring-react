@@ -8,8 +8,10 @@ app.use(express.json());
 app.post("/api/login", (req, res) => {
   const { username, password } = req.body;
   if (username === "admin" && password === "1234") {
+    console.log("Successful login");
     return res.json({ success: true, token: "mock-token" });
   }
+  console.log("Unsuccessful login");
   return res.status(401).json({ success: false, message: "Invalid credentials" });
 });
 
