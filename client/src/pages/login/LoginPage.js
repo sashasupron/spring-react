@@ -20,6 +20,33 @@ const LoginPage = () => {
   };
 
 
+  //  const checkLogin = async () => {
+  //   try {
+  //     const response = await fetch("/api/login", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify({ username: login, password })
+  //     });
+
+  //     const data = await response.json();
+
+  //     if (!response.ok) {
+  //       setError(data.message || "Login failed");
+  //       return;
+  //     }
+
+  //     dispatch({ type: "LOGIN" }); 
+  //     navigate("/");
+  //   } catch (err) {
+  //     console.error("Login error:", err);
+  //     setError("Server error");
+  //   }
+  // };
+
+
+
   return (
     <div className='login-page'>
       <h1 id='login-page-h1'>Login</h1>

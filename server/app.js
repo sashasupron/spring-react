@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const features = require("./data/features");
 
 const app = express();
 app.use(cors());
@@ -15,9 +16,9 @@ app.post("/api/login", (req, res) => {
   return res.status(401).json({ success: false, message: "Invalid credentials" });
 });
 
+
 app.get("/api/projects", (req, res) => {
-  const projects = [{ id: 1, name: "Project" }];
-  return res.json(projects);
+  res.json(features);
 });
 
 module.exports = app;
