@@ -4,7 +4,7 @@ import { LoginPage } from "../pages/login";
 import { ProjectPage } from "../pages/projects";
 
 const Router = () => {
-  const isAuthenticated = useSelector((state) => state.isAuthenticated);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const location = useLocation();
 
   if (!isAuthenticated && location.pathname !== "/login") {
