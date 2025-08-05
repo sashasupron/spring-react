@@ -10,7 +10,6 @@ function Search() {
       try {
         const res = await fetch('http://localhost:5000/api/projects');
         const data = await res.json();
-        console.log('DATA', data);
         setFeatures(data);
       } catch (err) {
         console.error('Error loading data:', err);

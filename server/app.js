@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const { features } = require('./data/features');
+const db = require('./database/db');
+
 
 const app = express();
 app.use(cors());
