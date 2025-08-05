@@ -191,4 +191,4 @@ const features = [
   },
 ];
 
-export { features };
+module.exports = features;

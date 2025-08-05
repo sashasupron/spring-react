@@ -8,7 +8,7 @@ function Search() {
   useEffect(() => {
     const fetchFeatures = async () => {
       try {
-        const res = await fetch('/api/projects');
+        const res = await fetch('http://localhost:5000/api/projects');
         const data = await res.json();
         console.log('DATA', data);
         setFeatures(data);

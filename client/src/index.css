@@ -191,14 +191,14 @@ p {
 }
 
 .names {
-  font-weight: 100;
+  font-weight:400;
   margin-bottom: -10px;
   margin: 0;
 }
 
 .description {
-  font-weight: 100;
-  color: rgb(125, 128, 142);
+  font-weight: 300;
+  color: rgb(88, 90, 100);
   font-size: 16px;
   line-height: 1.7;
 }

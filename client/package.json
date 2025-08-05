@@ -26,8 +26,6 @@
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix"
   },
 
-  "proxy": "http://localhost:5000",
-
 
   "eslintConfig": {
     "extends": [

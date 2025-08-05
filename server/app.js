@@ -18,8 +18,9 @@ app.post('/api/login', (req, res) => {
     .json({ success: false, message: 'Invalid credentials' });
 });
 
-app.get('/api/projects', (req, res) => {
-  res.json(features);
+app.get('/api/projects', async (req, res) => {
+  const projects = await db('projects').select('*');
+  res.json(projects);
 });
 
 module.exports = app;

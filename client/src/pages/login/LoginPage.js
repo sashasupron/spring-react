@@ -9,18 +9,9 @@ const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const checkLogin = () => {
-  //   if (login === "admin" && password === "1234") {
-  //     dispatch({ type: "LOGIN" });
-  //     navigate("/");
-  //   } else {
-  //     setError("Incorrect login or password");
-  //   }
-  // };
-
   const checkLogin = async () => {
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('http://localhost:5000/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
