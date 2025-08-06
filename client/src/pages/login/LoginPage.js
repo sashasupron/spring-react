@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setTokens } from '../../utils/tokensStorage';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [login, setLogin] = useState('');
@@ -55,11 +56,15 @@ const LoginPage = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      {error && <p id="error-message">{error}</p>}
+      {error && <p className="error-text">{error}</p>}
 
       <button className="search-button" onClick={checkLogin}>
         Log In
       </button>
+
+      <p className='login-navigate-link-button'>
+        Don't have an account? <Link to="/signup">Sign Up</Link>
+      </p>
     </div>
   );
 };
