@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FeaturesList } from './FeaturesList';
+import { authFetch } from '../utils/authFetch';
 
 function Search() {
   const [inputValue, setInputValue] = useState('');
@@ -8,7 +9,7 @@ function Search() {
   useEffect(() => {
     const fetchFeatures = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/projects');
+        const res = await authFetch('http://localhost:5000/api/projects');
         const data = await res.json();
         setFeatures(data);
       } catch (err) {

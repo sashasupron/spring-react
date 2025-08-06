@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { setTokens } from '../../utils/tokensStorage';
 
 const LoginPage = () => {
   const [login, setLogin] = useState('');
@@ -26,6 +27,7 @@ const LoginPage = () => {
         return;
       }
 
+      setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
       dispatch({ type: 'LOGIN' });
       navigate('/');
     } catch (err) {
